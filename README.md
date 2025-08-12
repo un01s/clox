@@ -1,4 +1,4 @@
-# clox : LOX in C, compiler, byte-code, and virtual machine
+# clox : lox in c, compiler, byte-code, and virtual machine
 
 ## reference
 
