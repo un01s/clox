@@ -3,7 +3,10 @@
 ## simple build
 
 ```
-$gcc src/main.c src/chunk.c src/memory.c -o test
+$ gcc src/main.c src/chunk.c src/memory.c src/debug.c -o test 
+$./test 
+== test chunk ==
+0000 OP_RETURN
 ```
 
 ## reference
