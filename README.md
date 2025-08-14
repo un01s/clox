@@ -19,8 +19,23 @@ $./test
 0002 OP_RETURN
 ```
 
-## [ch 15. a virtual machine](https://craftinginterpreters.com/a-virtual-machine.html)
+## [ch15. a virtual machine](https://craftinginterpreters.com/a-virtual-machine.html)
 
+```
+$ gcc src/main.c src/chunk.c src/memory.c src/debug.c src/value.c src/vm.c -o test
+$./test 
+== test chunk ==
+0000  123 OP_CONSTANT         0 '1.2'
+0002    | OP_NEGATE
+0003    | OP_RETURN
+          
+0000  123 OP_CONSTANT         0 '1.2'
+          [ 1.2 ]
+0002    | OP_NEGATE
+          [ -1.2 ]
+0003    | OP_RETURN
+-1.2
+```
 
 ## reference
 
