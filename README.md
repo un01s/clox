@@ -15,7 +15,7 @@ So in between AST and machine code, there is a bytecode.
 $ gcc src/main.c src/chunk.c src/memory.c src/debug.c src/value.c -o test
 $./test 
 == test chunk ==
-0000 OP_CONSTANT         0 '1.2'
+0000  123 OP_CONSTANT         0 '1.2'
 0002 OP_RETURN
 ```
 
