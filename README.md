@@ -1,6 +1,6 @@
 # clox : lox in c, compiler, byte-code, and virtual machine
 
-## [chunks of bytecode](https://craftinginterpreters.com/chunks-of-bytecode.html)
+## [ch14. chunks of bytecode](https://craftinginterpreters.com/chunks-of-bytecode.html)
 
 * AST walk or not
 
@@ -18,6 +18,9 @@ $./test
 0000  123 OP_CONSTANT         0 '1.2'
 0002 OP_RETURN
 ```
+
+## [ch 15. a virtual machine](https://craftinginterpreters.com/a-virtual-machine.html)
+
 
 ## reference
 
