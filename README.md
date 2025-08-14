@@ -1,12 +1,12 @@
 # clox : lox in c, compiler, byte-code, and virtual machine
 
-## [simple build](https://craftinginterpreters.com/chunks-of-bytecode.html)
+## [chunks of bytecode](https://craftinginterpreters.com/chunks-of-bytecode.html)
 
 * AST walk or not
 
 | AST | no AST |
 | --- | ------ |
-| simple to implement: the runtime representation of code is mapped directly to the syntax | memory-efficiency |
+| simple to implement (runtime rep of code mapped directly to the syntax) | memory-efficiency |
 | portable but slow | no overhead of each AST node |
 
 So in between AST and machine code, there is a bytecode.
