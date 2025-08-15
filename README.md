@@ -37,6 +37,36 @@ $./test
 -1.2
 ```
 
+* add binary operations
+
+```
+$ gcc src/main.c src/chunk.c src/memory.c src/debug.c src/value.c src/vm.c -o test
+$./test 
+== test chunk ==
+0000  123 OP_CONSTANT         0 '1.2'
+0002    | OP_CONSTANT         1 '3.4'
+0004    | OP_ADD
+0005    | OP_CONSTANT         2 '5.6'
+0007    | OP_DIV
+0008    | OP_NEGATE
+0009    | OP_RETURN
+          
+0000  123 OP_CONSTANT         0 '1.2'
+          [ 1.2 ]
+0002    | OP_CONSTANT         1 '3.4'
+          [ 1.2 ][ 3.4 ]
+0004    | OP_ADD
+          [ 4.6 ]
+0005    | OP_CONSTANT         2 '5.6'
+          [ 4.6 ][ 5.6 ]
+0007    | OP_DIV
+          [ 0.821429 ]
+0008    | OP_NEGATE
+          [ -0.821429 ]
+0009    | OP_RETURN
+-0.821429
+```
+
 ## reference
 
 * https://craftinginterpreters.com/chunks-of-bytecode.html
