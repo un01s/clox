@@ -71,3 +71,5 @@ $./test
 
 * https://craftinginterpreters.com/chunks-of-bytecode.html
 
+* [the implementation of Lua 5.0 PDF](https://www.lua.org/doc/jucs05.pdf)
+
