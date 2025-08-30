@@ -75,6 +75,11 @@ $ cmake .. && make
 $ ./clox
 ```
 
+## [ch 16. Scanner](https://craftinginterpreters.com/scanning-on-demand.html)
+
+source --> scanner --> tokens --> compiler --> bytecode chunks --> vm
+
+### interpreter
 
 ## reference
 
