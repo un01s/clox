@@ -67,6 +67,15 @@ $./test
 -0.821429
 ```
 
+## cmake
+
+```
+$ mkdir build && cd build
+$ cmake .. && make
+$ ./clox
+```
+
+
 ## reference
 
 * https://craftinginterpreters.com/chunks-of-bytecode.html
