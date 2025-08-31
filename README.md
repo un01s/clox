@@ -81,6 +81,27 @@ source --> scanner --> tokens --> compiler --> bytecode chunks --> vm
 
 ## [ch 17. compiler](https://craftinginterpreters.com/compiling-expressions.html)
 
+```
+$ cd build && cmake .. && make
+$./clox 
+> 3+2
+== code ==
+0000    1 OP_CONSTANT         0 '3'
+0002    | OP_CONSTANT         1 '2'
+0004    | OP_ADD
+0005    2 OP_RETURN
+          
+0000    1 OP_CONSTANT         0 '3'
+          [ 3 ]
+0002    | OP_CONSTANT         1 '2'
+          [ 3 ][ 2 ]
+0004    | OP_ADD
+          [ 5 ]
+0005    2 OP_RETURN
+5
+> 
+```
+
 ## reference
 
 * https://craftinginterpreters.com/chunks-of-bytecode.html
