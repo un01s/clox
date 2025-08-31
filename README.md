@@ -79,7 +79,7 @@ $ ./clox
 
 source --> scanner --> tokens --> compiler --> bytecode chunks --> vm
 
-### interpreter
+## [ch 17. compiler](https://craftinginterpreters.com/compiling-expressions.html)
 
 ## reference
 
