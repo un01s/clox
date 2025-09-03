@@ -108,6 +108,19 @@ $./clox
 
 * how do we store the value itself? 
 
+```
+$./clox
+> true
+== code ==
+0000    1 OP_TRUE
+0001    2 OP_RETURN
+          
+0000    1 OP_TRUE
+          [ true ]
+0001    2 OP_RETURN
+true
+> 
+```
 
 ## reference
 

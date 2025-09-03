@@ -6,11 +6,15 @@
 
 typedef enum {
   OP_CONSTANT,
+  OP_NIL,
+  OP_TRUE,
+  OP_FALSE,
   OP_ADD,
   OP_SUB,
   OP_MUL,
   OP_DIV,
-  OP_NEGATE,
+  OP_NOT, // logical NOT
+  OP_NEGATE, // number negate
   OP_RETURN,
 } OpCode;
 
