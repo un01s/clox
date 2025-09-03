@@ -102,6 +102,13 @@ $./clox
 > 
 ```
 
+## [ch 18. types of values](https://craftinginterpreters.com/types-of-values.html)
+
+* how do we represent the type of a value?
+
+* how do we store the value itself? 
+
+
 ## reference
 
 * https://craftinginterpreters.com/chunks-of-bytecode.html
