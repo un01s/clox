@@ -169,7 +169,18 @@ use branch this time for ch20.
 ```
 $ git checkout -b ch20-hashtable
 ```
+
+Given a key, the hashtable returns a value in constant time. Each key/value pair is an entry in the tabble.
  
+* separate chaining: an array of linked list
+* open addressing or closed hashing: linear probing, interleave
+
+hash function:
+
+* deterministic
+* uniform
+* fast
+
 ## reference
 
 * https://craftinginterpreters.com/chunks-of-bytecode.html
