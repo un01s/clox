@@ -161,6 +161,14 @@ $./clox
 string
 > 
 ```
+
+## [ch.20 hashtable](https://craftinginterpreters.com/hash-tables.html)
+
+use branch this time for ch20.
+
+```
+$ git checkout -b ch20-hashtable
+```
  
 ## reference
 
