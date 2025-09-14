@@ -1,6 +1,6 @@
 # clox : lox in c, compiler, byte-code, and virtual machine
 
-## [ch14. chunks of bytecode](https://craftinginterpreters.com/chunks-of-bytecode.html)
+## [ch.14 chunks of bytecode](https://craftinginterpreters.com/chunks-of-bytecode.html)
 
 * AST walk or not
 
@@ -19,7 +19,7 @@ $./test
 0002 OP_RETURN
 ```
 
-## [ch15. a virtual machine](https://craftinginterpreters.com/a-virtual-machine.html)
+## [ch.15 a virtual machine](https://craftinginterpreters.com/a-virtual-machine.html)
 
 ```
 $ gcc src/main.c src/chunk.c src/memory.c src/debug.c src/value.c src/vm.c -o test
@@ -75,11 +75,11 @@ $ cmake .. && make
 $ ./clox
 ```
 
-## [ch 16. Scanner](https://craftinginterpreters.com/scanning-on-demand.html)
+## [ch.16 Scanner](https://craftinginterpreters.com/scanning-on-demand.html)
 
 source --> scanner --> tokens --> compiler --> bytecode chunks --> vm
 
-## [ch 17. compiler](https://craftinginterpreters.com/compiling-expressions.html)
+## [ch.17 compiler](https://craftinginterpreters.com/compiling-expressions.html)
 
 ```
 $ cd build && cmake .. && make
@@ -102,7 +102,7 @@ $./clox
 > 
 ```
 
-## [ch 18. types of values](https://craftinginterpreters.com/types-of-values.html)
+## [ch.18 types of values](https://craftinginterpreters.com/types-of-values.html)
 
 * how do we represent the type of a value?
 
@@ -122,11 +122,46 @@ true
 > 
 ```
 
-## [ch. 19 strings](https://craftinginterpreters.com/strings.html)
+## [ch.19 strings](https://craftinginterpreters.com/strings.html)
 
 strings have varied length for storage in heap. Other smaller are in the stack.
 
+there is a strange linker error as follows:
+```
+[ 11%] Linking C executable clox
+Undefined symbols for architecture arm64:
+  "_copyString", referenced from:
+      _string in compiler.c.o
+  "_printObject", referenced from:
+      _printValue in value.c.o
+  "_takeString", referenced from:
+      _concatenate in vm.c.o
+ld: symbol(s) not found for architecture arm64
+cc: error: linker command failed with exit code 1 (use -v to see invocation)
+```
 
+Then I realized that cmake was used. So update ```CMakeLists.txt``` because of new files ```object.c``` added.
+
+```
+$./clox 
+> "str" + "ing"
+== code ==
+0000    1 OP_CONSTANT         0 'str'
+0002    | OP_CONSTANT         1 'ing'
+0004    | OP_ADD
+0005    2 OP_RETURN
+          
+0000    1 OP_CONSTANT         0 'str'
+          [ str ]
+0002    | OP_CONSTANT         1 'ing'
+          [ str ][ ing ]
+0004    | OP_ADD
+          [ string ]
+0005    2 OP_RETURN
+string
+> 
+```
+ 
 ## reference
 
 * https://craftinginterpreters.com/chunks-of-bytecode.html
