@@ -140,7 +140,7 @@ ld: symbol(s) not found for architecture arm64
 cc: error: linker command failed with exit code 1 (use -v to see invocation)
 ```
 
-Then I realized that cmake was used. So update ```CMakeLists.txt``` because of new files ```object.c``` added.
+Then I realized that cmake was used. So update ```CMakeLists.txt``` because of a new file ```object.c``` added.
 
 ```
 $./clox 
