@@ -181,6 +181,14 @@ hash function:
 * uniform
 * fast
 
+There is an compilation error complaining ```NIL_VAL``` defined in ```value.h```.
+
+```
+[  9%] Building C object CMakeFiles/clox.dir/src/object.c.o
+~/clox/src/object.c:25:33: error: use of undeclared identifier 'NIL_VAL'
+   25 |   tableSet(&vm.strings, string, NIL_VAL);
+```
+
 ## reference
 
 * https://craftinginterpreters.com/chunks-of-bytecode.html
