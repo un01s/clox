@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "object.h"
 #include "common.h"
 #include "compiler.h"
 #include "scanner.h"
@@ -170,7 +171,7 @@ static void number() {
 }
 
 static void string() {
-  emitConstant(OBJ_VAL(copyString(parser.previous.start + 1,
+  emitConstant(OBJ_VAL(loxCopyString(parser.previous.start + 1,
                                   parser.previous.length -2)));
 }
 
