@@ -122,6 +122,11 @@ true
 > 
 ```
 
+## [ch. 19 strings](https://craftinginterpreters.com/strings.html)
+
+strings have varied length for storage in heap. Other smaller are in the stack.
+
+
 ## reference
 
 * https://craftinginterpreters.com/chunks-of-bytecode.html
