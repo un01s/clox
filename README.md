@@ -189,6 +189,22 @@ There is an compilation error complaining ```NIL_VAL``` defined in ```value.h```
    25 |   tableSet(&vm.strings, string, NIL_VAL);
 ```
 
+Use a Makefile but it still complains ```NIL_VAL```. It is saved as Makefile_copy.
+
+```
+$ make
+gcc  -c src/chunk.c -o chunk.o
+gcc  -c src/compiler.c -o compiler.o
+gcc  -c src/debug.c -o debug.o
+gcc  -c src/main.c -o main.o
+gcc  -c src/memory.c -o memory.o
+gcc  -c src/object.c -o object.o
+src/object.c:26:33: error: use of undeclared identifier 'NIL_VAL'
+   26 |   tableSet(&vm.strings, string, NIL_VAL);
+      |                                 ^
+1 error generated.
+```
+
 ## reference
 
 * https://craftinginterpreters.com/chunks-of-bytecode.html
